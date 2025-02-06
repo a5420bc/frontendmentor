@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --clr-primary-400: hsl(158, 36%, 37%);
+      --clr-primary-500: hsl(158, 36%, 20%);
+      --clr-secondary-200: hsl(30, 38%, 92%);
+
+      --clr-neutral-900: hsl(212, 21%, 14%);
+      --clr-neutral-400: hsl(228, 12%, 48%);
+      --clr-neutral-100: hsl(0, 0%, 100%);
+
+      --ff-accent: "Fraunces", serif;
+      --ff-base: "Montserrat", sans-serif;
+
+      --fw-regular: 500;
+      --fw-bold: 700;
+    }
+    * {
+      margin:0;
+      padding:0;
+      box-sizing: content-box;
+    }
+    body {
+      font-family: var(--ff-accent),sans-serif;
+      background-color: var(--clr-secondary-200);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 100vh;
+    }
+    .wrap {
+      width: 90%;
+      max-width: 840px;
+      background-color:var(--clr-neutral-100);
+      border-radius: 20px;
+      line-height: 1.5;
+      color:var(--clr-neutral-400);
+    }
+    .img img{
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .content{
+      padding: 1.5rem;
+    }
+    .content > * + * {
+      margin: 1.5rem 0;
+    }
+    .content h1 {
+        color:var(--clr-neutral-900);
+        font-weight: var(--fw-bold);
+    }
+    .price-now{
+      font-size: 2rem;
+      color:var(--clr-primary-400);
+      font-weight: var(--fw-bold);
+      margin-right: 2rem;
+    }
+    .price-origin {
+      text-decoration: line-through;
+    }
+    .submit{
+      background-color: var(--clr-primary-400);
+      color:var(--clr-neutral-100);
+      text-align: center;
+      padding:1rem;
+      border-radius: 10px;
+    }
+    .submit img {
+      margin-right: 1rem;
+    }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (min-width: 40em) {
+      .wrap {
+        display: flex;
+      }
+
+      .img {
+        flex:1;
+      }
+      .content{
+        flex:1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .img img {
+        height: 100%;
+        border-radius: 20px 0 0 20px;
+      }
+      .submit:hover {
+        cursor:pointer;
+      }
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="img">
+      <img srcset="
+            ./images/image-product-mobile.jpg 380w,
+            ./images/image-product-desktop.jpg 960w
+         " sizes="
+         (min-width:960px) 960px,
+         (max-width:450px) 200px
+         " />
+    </div>
+    <div class="content">
+      <div class="sub-title">
+        Perfume
+      </div>
+      <div class="title">
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+      </div>
+      <p>
+        A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <p><span class="price-now">$149.99</span><span class="price-origin">$169.99</span></p>
+      <div class="submit"><img src="./images/icon-cart.svg" /><span>Add to Cart</span></div>
+    </div>
+  </div>
+</body>
+
+</html>

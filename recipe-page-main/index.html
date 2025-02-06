@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: outfit;
+      src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+      font-family: youngserif;
+      src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    }
+
+    :root {
+      --White: hsl(0, 0%, 100%);
+      --Stone-100: hsl(30, 54%, 90%);
+      --Stone-150: hsl(30, 18%, 87%);
+      --Stone-600: hsl(30, 10%, 34%);
+      --Stone-900: hsl(24, 5%, 18%);
+      --Brown-800: hsl(14, 45%, 36%);
+      --Rose-800: hsl(332, 51%, 32%);
+      --Rose-50: hsl(330, 100%, 98%);
+    }
+
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 0;
+      font-family: outfit;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 100vh;
+      background-color: var(--Stone-100);
+      font-family: outfit;
+    }
+
+    .wrap {
+      width: 50%;
+      background-color: var(--White);
+      border-radius: 1rem;
+      padding: 2rem;
+      color: var(--Stone-600);
+    }
+
+    .banner img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    .banner h1 {
+      margin: 1.5rem 0 1rem;
+    }
+
+    .banner p {
+      margin-bottom: 1rem;
+    }
+
+    .time {
+      background-color: var(--Rose-50);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .time p {
+      font-size: 1.5rem;
+      color: var(--Rose-800);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .time ul>li {
+      line-height: 2;
+      list-style-position: inside;
+      padding-left: .5rem;
+    }
+
+    .time ul>li>span {
+      padding-left: 8px;
+      font-weight: bold;
+    }
+
+    .step {
+      border-bottom: 1px solid var(--Stone-150);
+      padding-bottom: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .step h2 {
+      font-family: youngserif;
+      font-weight: 400;
+      color: var(--Rose-800);
+      letter-spacing: 0.05rem;
+      font-size: 2rem;
+      margin-bottom: .5rem;
+    }
+
+    .step ul,ol {
+      padding-left: 30px;
+    }
+
+    .step li {
+      padding-left: 1rem;
+      padding-bottom: .5rem;
+    }
+
+    .step li::marker {
+      color: var(--Rose-800);
+    }
+    .step li.no-style{
+      list-style: none;
+    }
+    .step .subtitle {
+      margin:16px 0;
+    }
+    .step:nth-last-child(1) {
+      border-bottom: 0;
+    }
+    .step:nth-last-child(1) ul{
+      padding-left:0;
+    }
+    .step:nth-last-child(1) li{
+      border-bottom: 1px solid var(--Stone-150);
+      word-spacing: -6px;
+    }
+    .step:nth-last-child(1) li  span {
+      display: inline-block;
+      width: 50%;
+      word-spacing: 0;
+    }
+    .step:nth-last-child(1) li:nth-last-child(1) {
+      border-bottom: none;
+    }
+    .kg {
+      color:var(--Rose-800);
+      font-weight: bold;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="banner">
+      <img src="./assets/images/image-omelette.jpeg" />
+      <h1>Simple Omelette Recipe</h1>
+
+      <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection,
+        optionally filled with your choice of cheese, vegetables, or meats.</p>
+      <div class="time">
+        <p>Preparation time</p>
+        <ul>
+          <li><span>Total</span>: Approximately 10 minutes</li>
+          <li><span>Preparation</span>: 5 minutes</li>
+          <li><span>Cooking</span>: 5 minutes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h2>Instructions</h2>
+
+      <ol>
+        <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+        <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure
+        the eggs evenly coat the surface.
+        <li><strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the
+        middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li><strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the
+        fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+    </div>
+
+    <div class="step">
+      <h2>Nutrition</h2>
+
+      <ul>
+        <p class="subtitle">The table below shows nutritional values per serving without the additional fillings.</p>
+
+        <ul>
+          <li class="no-style">
+            <span class="name">Calories</span>
+            <span class="kg">277kcal</span>
+          </li>
+          <li class="no-style">
+            <span class="name">Carbs</span>
+            <span class="kg">0g</span>
+          </li>
+          <li class="no-style">
+            <span class="name">Protein</span>
+            <span class="kg">20g</span>
+          </li>
+          <li class="no-style">
+            <span class="name">Fat</span>
+            <span class="kg">22g</span>
+          </li>
+        </ul>
+    </div>
+  </div>
+</body>
+
+</html>

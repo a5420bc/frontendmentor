@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --Green: hsl(75, 94%, 57%);
+      --White: hsl(0, 0%, 100%);
+      --Grey-700: hsl(0, 0%, 20%);
+      --Grey-800: hsl(0, 0%, 12%);
+      --Grey-900: hsl(0, 0%, 8%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      min-height: 100vh;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--Grey-900);
+      font-family: Inter, ;
+    }
+    .wrap {
+      width: 340px;
+      display: flex;
+      padding: 20px;
+      flex-direction: column;
+      border-radius: 10px;
+      color:var(--White);
+      background-color: var(--Grey-800);
+      text-align: center;
+      row-gap: 12px;
+    }
+    .profile img {
+      width: 80px;
+      border-radius: 100px;
+    }
+    .name {
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .address {
+      font-size:13px;
+      font-weight: bold;
+      color:var(--Green);
+      margin-bottom: 25px;
+    }
+    .skill {
+      font-size: 13px;
+    }
+    .social a {
+      margin:10px 0;
+      color:var(--White);
+      background-color: var(--Grey-700);
+      text-decoration: none;
+      display: block;
+      border-radius: 5px;
+      transition: 0.3s ease-in;
+      line-height: 1.5;
+      padding: 10px 0;
+    }
+    .social a:first-of-type {
+      margin-top: 0;
+    }
+    .social a:hover {
+      background-color: var(--Green);
+      color:var(--Grey-900);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="profile">
+      <img src="./assets/images/avatar-jessica.jpeg"/>
+      <p class="name">Jessica Randall</p>
+      <p class="address">London, United Kingdom</p>
+      <p class="skill">"Front-end developer and avid reader."</p>
+    </div>
+    <div class="social">
+      <a href="#">GitHub</a>
+      <a href="#">Frontend Mentor</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+</body>
+
+</html>

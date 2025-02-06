@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --Red: hsl(0, 78%, 62%);
+      --Cyan: hsl(180, 62%, 55%);
+      --Orange: hsl(34, 97%, 64%);
+      --Blue: hsl(212, 86%, 64%);
+      --Very-Dark-Blue: hsl(234, 12%, 34%);
+      --Grayish-Blue: hsl(229, 6%, 66%);
+      --Very-Light-Gray: hsl(0, 0%, 98%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Fraunces, sans-serif;
+      display: grid;
+      place-content: center;
+      height: 100%;
+    }
+    .header {
+      text-align: center;
+      color:var(--Grayish-Blue);
+      max-width: 540px;
+      margin:60px auto 40px;
+      line-height: 1.5;
+    }
+    .header h1:first-of-type{
+      font-size: calc(1.25rem + 1vw);
+    }
+    .header h1:last-of-type {
+      font-size:calc(1.375rem + 1vw);
+    }
+    .card {
+      display: grid;
+      grid-template-rows: repeat(4,125px);
+      grid-template-columns: repeat(3, 360px);
+      grid-template-areas:
+      ". red ."
+      "cyan red blue"
+      "cyan orange blue"
+      ". orange ."
+      ;
+      gap:2rem;
+      padding: 1.5rem;
+    }
+    .item {
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+      border: 5px solid transparent;
+      line-height: 1.5;
+      padding: 1.5rem;
+    }
+    .item img {
+      display:block;
+      margin-top: 4rem;
+      float: right;
+    }
+    .item p {
+      color:var(--Grayish-Blue);
+    }
+    .red {
+      grid-area: red;
+      border-top-color: var(--Red);
+    }
+    .cyan {
+      grid-area: cyan;
+      border-top-color: var(--Cyan);
+    }
+    .orange {
+      grid-area: orange;
+      border-top-color: var(--Orange);
+    }
+    .blue {
+      border-top-color: var(--Blue);
+      grid-area: blue;
+    }
+    .header h1:nth-of-type(1) {
+      font-weight: 400;
+    }
+    .header h1:nth-of-type(2) {
+      color:var(--Very-Dark-Blue);
+      font-weight: 400;
+    }
+
+    @media (max-width:1144px) {
+      .card{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+      }
+      .item {
+        max-width: 350px;
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>Reliable, efficient delivery</h1>
+      <h1>Powered by Technology</h1>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data points
+        to ensure that your project is successful
+      </p>
+    </div>
+    <div class="card">
+      <div class="item cyan">
+        <h3>Supervisor</h3>
+        <p>Monitors activity to identify project roadblocks</p>
+        <img src="./images/icon-supervisor.svg">
+      </div>
+      <div class="item red">
+        <h3>Team Builder</h3>
+        <p>Scans our talent network to create the optimal team for your project</p>
+        <img src="./images/icon-team-builder.svg">
+      </div>
+      <div class="item orange">
+        <h3>Karma</h3>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <img src="./images/icon-karma.svg">
+      </div>
+      <div class="item blue">
+        <h3>Calculator</h3>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img src="./images/icon-calculator.svg">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
