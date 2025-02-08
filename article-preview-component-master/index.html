@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+      --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+      --Grayish-Blue: hsl(212, 23%, 69%);
+      --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 100vh;
+      background-color: var(--Light-Grayish-Blue);
+      padding: 5rem 1rem;
+    }
+
+    .wrap {
+      border-radius: 10px;
+      display: flex;
+      background-color: white;
+      color: var(--Grayish-Blue);
+      position: relative;
+    }
+
+    .wrap .left {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 280px;
+    }
+
+    .info {
+      padding: 1.5rem;
+      line-height: 1.5;
+      align-self: baseline;
+      max-width: 450px;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      color: var(--Very-Dark-Grayish-Blue);
+      font-weight: 500;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .profile .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .name {
+      display: inline-block;
+    }
+
+    .name-name {
+      color: var(--Very-Dark-Grayish-Blue);
+    }
+
+    .share-container {
+      align-self: center;
+      position: relative;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .share-container:hover {
+      background-color: var(--Light-Grayish-Blue);
+    }
+
+    .share-container:hover .share-icon img {
+      filter: invert(1);
+    }
+
+    .share-container:hover .share {
+      display: flex;
+    }
+
+    .share-icon {
+      border-radius: 50%;
+      padding: 0.75rem;
+      display: block;
+    }
+
+    .share-container img {
+      width: 15px;
+      height: 15px;
+    }
+
+    .share {
+      position: absolute;
+      background-color: var(--Very-Dark-Grayish-Blue);
+      display: flex;
+      gap: 1rem;
+      padding: 0.75rem 2rem;
+      border-radius: 10px;
+      display: none;
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: -4.2rem;
+    }
+
+    .share::before {
+      content: "";
+      border-top: 10px solid var(--Very-Dark-Grayish-Blue);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      bottom: -0.6rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .share img {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    .share-img {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    @media (max-width:732px) {
+      .wrap {
+        flex-direction: column;
+      }
+
+      .wrap .left {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        width: 100%;
+        height: 280px;
+      }
+      .share-container {
+        position: static;
+      }
+      .share {
+          display: none;
+          left:0;
+          right: 0;
+          bottom:0;
+          top:unset;
+          transform: translate(0%,0%);
+          padding:1.75rem 2rem;
+      }
+      .share::before{
+        border: 0;
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <img class="left" src="./images/drawers.jpg">
+    <div class="info">
+      <p class="title">Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home
+      </p>
+
+      <p class="content">
+        Ever been in a room and felt like something was missing? Perhaps
+        it felt slightly bare and uninviting. I’ve got some simple tips
+        to help you make any room feel complete.
+      </p>
+
+      <div class="profile">
+        <div>
+          <img class="avatar" src="./images/avatar-michelle.jpg">
+          <div class="name">
+            <p class="name-name">Michelle Appleton</p>
+            <p>28 Jun 2020</p>
+          </div>
+        </div>
+        <div class="share-container">
+          <a class="share-icon" href="#"><img src="./images/icon-share.svg"></a>
+          <div class="share">
+            <span>Share</span>
+            <div class="share-img">
+              <img src="./images/icon-facebook.svg">
+              <img src="./images/icon-twitter.svg">
+              <img src="./images/icon-pinterest.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+
+</html>
