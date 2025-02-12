@@ -1,0 +1,233 @@
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --lightred-work: hsl(15, 100%, 70%);
+  --softblue-play: hsl(195, 74%, 62%);
+  --lightred-study: hsl(348, 100%, 68%);
+  --limegreen-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --softorangeself-care: hsl(43, 84%, 65%);
+  --verydarkblue: hsl(226, 43%, 10%);
+  --darkblue: hsl(235, 46%, 20%);
+  --desaturatedblue: hsl(235, 45%, 61%);
+  --paleblue: hsl(236, 100%, 87%);
+  --card-blue: hsl(235, 45%, 36%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--verydarkblue);
+  color: white;
+}
+
+.card {
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -10%;
+  display: flex;
+  align-items: flex-end;
+  min-height: 160px;
+  min-width: 130px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1rem;
+  gap: 2rem;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 1rem;
+  align-items: center;
+  line-height: 1.2;
+  background-color: var(--blue);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.profile img {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 65px;
+}
+.profile h1 {
+  font-size: 28px;
+}
+.tab {
+  padding-bottom: 1.5rem;
+}
+.tab ul {
+  display: flex;
+  justify-content: space-around;
+}
+.content {
+  background-color: var(--darkblue);
+  border-radius: 10px;
+  height: 78%;
+  padding: 2rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.content:hover {
+  background-color: var(--card-blue);
+}
+
+.content .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8px;
+}
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail .time_current {
+  font-size: 28px;
+}
+.detail .time_last {
+  color: var(--paleblue);
+}
+.tab {
+  border-radius: 10px;
+  background-color: var(--darkblue);
+}
+.tab p {
+  color: var(--paleblue);
+}
+.tab ul {
+  list-style: none;
+}
+.tab ul a {
+  color: var(--desaturatedblue);
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+.tab ul a.active {
+  color: white;
+}
+.tab ul a:hover {
+  color: white;
+}
+
+.work {
+  background-image: url(./images/icon-work.svg);
+  background-color: var(--lightred-work);
+}
+.play {
+  background-image: url(./images/icon-play.svg);
+  background-color: var(--softblue-play);
+}
+.study {
+  background-image: url(./images/icon-study.svg);
+  background-color: var(--lightred-study);
+}
+.exercise {
+  background-image: url(./images/icon-exercise.svg);
+  background-color: var(--limegreen-exercise);
+}
+.social {
+  background-image: url(./images/icon-social.svg);
+  background-color: var(--violet-social);
+}
+.self-care {
+  background-image: url(./images/icon-self-care.svg);
+  background-color: var(--softorangeself-care);
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 260px));
+    grid-template-rows: repeat(4,minmax(260px, auto));
+    justify-content: center;
+    gap: 1rem;
+  }
+  .tab {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .tab h1 {
+    font-size: 40px;
+  }
+  .tab ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 2rem;
+    gap: 1rem;
+    font-size: 18px;
+    padding-bottom: 2rem;
+  }
+  .profile {
+    display: block;
+    padding: 2rem 2rem 5rem;
+  }
+
+  .profile img {
+    width: 80px;
+    margin-bottom: 2rem;
+  }
+  .content .title {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .detail {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .wrap {
+    display: grid;
+    place-content: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 260px));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    grid-template-areas:
+      "tab work play study"
+      "tab exercise socail self-care";
+    max-width: 1240px;
+  }
+  .detail .time_current {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+  .tab {
+    grid-area: tab;
+  }
+  .work {
+    grid-area: work;
+  }
+
+  .play {
+    grid-area: play;
+  }
+  .study {
+    grid-area: study;
+  }
+
+  .exercise {
+    grid-area: exercise;
+  }
+
+  .socail {
+    grid-area: socail;
+  }
+
+  .self-care {
+    grid-area: self-care;
+  }
+}
