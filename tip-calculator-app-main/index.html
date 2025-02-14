@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" <title>Frontend Mentor | Tip calculator app</title>
+  <script defer src="./app.js"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <div class="input">
+        <div>
+          <div class="label-wrap">
+            <label for="bill">Bill</label>
+            <p class="error-tips error-bill"></p>
+          </div>
+          <input id="bill" placeholder="0" type="number" />
+        </div>
+        <div>
+          <div class="label-wrap">
+            <label for="tips">Select Tip %</label>
+            <p class="error-tips error-bill"></p>
+          </div>
+          <div class="select-tips">
+            <span>5%</span>
+            <span>10%</span>
+            <span>15%</span>
+            <span>25%</span>
+            <span>50%</span>
+            <input id="tips" type="number" placeholder="Custom">
+          </div>
+        </div>
+        <div>
+          <div class="label-wrap">
+            <label for="people">Number of People</label>
+            <p class="error-tips error-people"></p>
+          </div>
+          <input type="number" placeholder="0" id="people">
+        </div>
+      </div>
+      <div class="result">
+        <div class="amount">
+          <div class="amount-desc">
+            <span>Tip Amount</span>
+            <span>/ person</span>
+          </div>
+          <span class="calc" id="amount">0.00</span>
+        </div>
+        <div class="amount">
+          <div class="amount-desc">
+            <span>Total</span>
+            <span>/ person</span>
+          </div>
+          <span class="calc" id="total">0.00</span>
+        </div>
+        <button class="button">RESET</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
