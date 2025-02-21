@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --Soft-blue: hsl(215, 51%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
+      --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
+      --Very-dark-blue-cardBG: hsl(216, 50%, 16%);
+      --Very-dark-blue-line: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+      background-color: var(--Very-dark-blue-mainBG);
+    }
+
+    .container {
+      padding: 1.5rem;
+      background-color: var(--Very-dark-blue-cardBG);
+      max-width: 400px;
+      border-radius: 20px;
+    }
+
+    .container__img {
+      position: relative;
+    }
+
+    .container__img img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .container__img:hover .container__view{
+      opacity: 1;
+    }
+
+    .container__view {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: grid;
+      place-content: center;
+      background-color: hsla(178, 100%, 50%, 0.3);
+      opacity: 0;
+    }
+
+    .container__view img {
+      width: 48px;
+    }
+
+    .container__profile {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--Very-dark-blue-line);
+    }
+
+    .container__profile h1 {
+      margin-top: 1.5rem;
+      font-size: 24px;
+      color: var(--White);
+      cursor: pointer;
+    }
+
+    .container__profile h1:hover {
+      color: var(--Cyan);
+    }
+
+    .container__profile p {
+      margin: 2rem 0;
+      color: var(--Soft-blue);
+      font-size: 18px;
+    }
+
+    .container__money {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--Cyan);
+      font-weight: 700;
+    }
+
+    .right {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      color: var(--Soft-blue);
+    }
+
+    .footer {
+      display: flex;
+      padding: 1rem 0;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer img {
+      width: 32px;
+      aspect-ratio: 1/1;
+      border:1px solid var(--White);
+      border-radius: 50%;
+    }
+
+    .footer p {
+      color: var(--Soft-blue);
+    }
+
+    .footer p span {
+      color: white;
+      cursor: pointer;
+    }
+
+    .footer p span:hover {
+      color: var(--Cyan);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <div>
+        <div class="container__img">
+          <img src="./images/image-equilibrium.jpg">
+          <div class="container__view">
+            <img src="./images/icon-view.svg">
+          </div>
+        </div>
+      </div>
+      <div class="container__profile">
+        <h1>Equilibrium #3429</h1>
+        <p>
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="container__money">
+          <div class="left">
+            <img src="./images/icon-ethereum.svg">
+            <span>0.041 ETH</span>
+          </div>
+          <div class="right">
+            <img src="./images/icon-clock.svg">
+            <span>3 days left</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="./images/image-avatar.png">
+        <p>
+          Creation of <span class="name">Jules Wyvern</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
