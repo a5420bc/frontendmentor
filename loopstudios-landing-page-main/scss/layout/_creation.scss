@@ -8,7 +8,7 @@
     align-items: center;
     grid-template-areas: "h1 btn" "card card";
     max-width: 122rem;
-    padding:0 5.5rem;
+    padding: 0 5.5rem;
   }
   @media screen and (min-width: 1200px) {
     grid-gap: 8rem;
@@ -34,6 +34,9 @@
     grid-gap: 2.4rem;
     @media screen and (min-width: 1200px) {
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    @media screen and (min-width: 850px) {
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
     @media screen and (min-width: 750px) {
       grid-gap: 3rem;

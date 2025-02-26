@@ -141,6 +141,8 @@ html {
 }
 .header__content {
   width: 100%;
+  max-width: 48rem;
+  align-content: center;
 }
 @media only screen and (min-width: 750px) {
   .header__content {
@@ -288,6 +290,11 @@ html {
 @media screen and (min-width: 1200px) {
   .creation__cards {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+}
+@media screen and (min-width: 850px) {
+  .creation__cards {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   }
 }
 @media screen and (min-width: 750px) {
