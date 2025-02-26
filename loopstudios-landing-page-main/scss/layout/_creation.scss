@@ -1,0 +1,176 @@
+.creation {
+  display: grid;
+  padding: 0 2.4rem;
+  grid-gap: 3.2rem;
+  width: 100%;
+  @media screen and (min-width: 750px) {
+    grid-gap: 6rem;
+    align-items: center;
+    grid-template-areas: "h1 btn" "card card";
+    max-width: 122rem;
+    padding:0 5.5rem;
+  }
+  @media screen and (min-width: 1200px) {
+    grid-gap: 8rem;
+    margin: 2.5rem 0;
+  }
+  h1 {
+    text-align: center;
+    color: #000;
+    font-size: 3.2rem;
+    line-height: 1;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    @media screen and (min-width: 750px) {
+      grid-area: h1;
+    }
+  }
+  &__cards {
+    margin-top: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    justify-content: center;
+    grid-gap: 2.4rem;
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    @media screen and (min-width: 750px) {
+      grid-gap: 3rem;
+      grid-area: card;
+    }
+    .card {
+      cursor: pointer;
+      overflow: hidden;
+      height: 12rem;
+      width: 100%;
+      position: relative;
+      padding: 0 0 2rem 2rem;
+      display: grid;
+      align-items: end;
+      justify-content: start;
+      @media screen and (min-width: 1200px) {
+        height: 45rem;
+        padding: 3rem 4rem;
+      }
+      p {
+        position: relative;
+        z-index: 10;
+        color: $White;
+        font-size: 2.4rem;
+        line-height: 1;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: all 0.3s;
+      }
+      &-1::before {
+        background-image: url(../../images/mobile/image-deep-earth.jpg);
+      }
+      &-2::before {
+        background-image: url(../../images/mobile/image-night-arcade.jpg);
+      }
+      &-3::before {
+        background-image: url(../../images/mobile/image-soccer-team.jpg);
+      }
+      &-4::before {
+        background-image: url(../../images/mobile/image-grid.jpg);
+      }
+      &-5::before {
+        background-image: url(../../images/mobile/image-from-above.jpg);
+      }
+      &-6::before {
+        background-image: url(../../images/mobile/image-pocket-borealis.jpg);
+      }
+      &-7::before {
+        background-image: url(../../images/mobile/image-curiosity.jpg);
+      }
+      &-8::before {
+        background-image: url(../../images/mobile/image-fisheye.jpg);
+      }
+      @media only screen and (min-width: 1200px) {
+        &-1::before {
+          background-image: url(../../images/desktop/image-deep-earth.jpg);
+        }
+        &-2::before {
+          background-image: url(../../images/desktop/image-night-arcade.jpg);
+        }
+        &-3::before {
+          background-image: url(../../images/desktop/image-soccer-team.jpg);
+        }
+        &-4::before {
+          background-image: url(../../images/desktop/image-grid.jpg);
+        }
+        &-5::before {
+          background-image: url(../../images/desktop/image-from-above.jpg);
+        }
+        &-6::before {
+          background-image: url(../../images/desktop/image-pocket-borealis.jpg);
+        }
+        &-7::before {
+          background-image: url(../../images/desktop/image-curiosity.jpg);
+        }
+        &-8::before {
+          background-image: url(../../images/desktop/image-fisheye.jpg);
+        }
+      }
+      &:hover {
+        &::after {
+          background-color: rgba($color: $White, $alpha: 0.7);
+        }
+        &::before {
+          transform: scale(1.2);
+        }
+        p {
+          color: $Black;
+        }
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all 0.3s;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+      }
+      &::after {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.5),
+          transparent
+        );
+      }
+    }
+  }
+  &__btn {
+    font-size: 1.4rem;
+    padding: 1rem 3.8rem;
+    letter-spacing: 0.5rem;
+    transform: all 0.8s;
+    background-color: $White;
+    color: $Black;
+    border: 1.5px solid $Black;
+    text-align: center;
+    justify-self: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Alata", sans-serif;
+    cursor: pointer;
+    @media screen and (min-width: 750px) {
+      grid-area: btn;
+    }
+    &:hover {
+      background-color: $Black;
+      color: $White;
+    }
+  }
+}

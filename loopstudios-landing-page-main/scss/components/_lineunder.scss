@@ -1,0 +1,17 @@
+@mixin lineunder($width: 100%) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &::after {
+    content: "";
+    height: 2px;
+    width: $width;
+    background-color: $White;
+    transform: scaleX(0);
+    transition: all 0.3s;
+    align-self: center;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}

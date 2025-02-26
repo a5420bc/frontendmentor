@@ -1,0 +1,140 @@
+.header {
+  background-image: url(./images/mobile/image-hero.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 65rem;
+  padding: 4rem 2.4rem;
+  display: grid;
+  justify-items: center;
+  color: $White;
+  width: 100%;
+  @media only screen and (min-width: 750px) {
+    padding: 6.4rem 5.5rem;
+    place-content: unset;
+    align-items: start;
+  }
+  .nav {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    top: 0;
+    padding: 4rem 2.4rem;
+    z-index: 20;
+    transition: all 0.3s;
+    @media only screen and (min-width: 750px) {
+      position: unset;
+      padding: 0;
+      max-width: 111rem;
+    }
+    &-scroll {
+      background-color: $Black;
+    }
+    &__img-wrapper {
+      z-index: 20;
+      width: clamp(144px, 30%, 192px);
+      cursor: pointer;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    &__btn {
+      border: none;
+      cursor: pointer;
+      z-index: 20;
+      img {
+        display: block;
+      }
+      @media screen and (min-width: 750px) {
+        display: none;
+      }
+    }
+    &-list {
+      transition: all 0.3s;
+      background-color: $Black;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 2rem;
+      height: 100vh;
+      left: 0;
+      top: 0;
+      padding: 22rem 2.4rem 0 2.4rem;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      @media screen and (min-width: 750px) {
+        position: static;
+        flex-direction: row;
+        width: unset;
+        height: unset;
+        top: unset;
+        left: unset;
+        padding: 0;
+        color: $White;
+        z-index: 20;
+        background-color: unset;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+      }
+      li {
+        cursor: pointer;
+        line-height: 1;
+        list-style: none;
+        font-weight: 300;
+        font-family: "Josefin Sans", sans-serif;
+        @include lineunder;
+      }
+    }
+
+    &-list-hidden {
+      transition: all 0.3s;
+      top: -100vh;
+      visibility: hidden;
+      @media only screen and (min-width: 750px) {
+        visibility: visible;
+        top: unset;
+        transition: unset;
+        height: unset;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    @media only screen and (min-width: 750px) {
+      margin-top: 5rem;
+      max-width: 111rem;
+    }
+    p {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: clamp(4rem, calc(8vw + 1rem), 5.6rem);
+      line-height: 0.95;
+      border: 2px solid $White;
+      padding: 2.5rem 2.2rem 1.7rem;
+      font-family: "Josefin Sans", sans-serif;
+      @media only screen and (min-width: 750px) {
+        padding: 3.8rem 3.8rem 2.8rem;
+        max-width: 56rem;
+        line-height: 0.97;
+      }
+    }
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,73 @@
+.footer {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding: 5.6rem 2.4rem;
+  background-color: $Black;
+  width: 100%;
+  @media only screen and (min-width: 850px) {
+    justify-content: space-between;
+    padding: 4.5rem 5.5rem;
+    grid-template-areas: "h1 socials" "links copyright";
+    grid-gap: 2.2rem;
+    align-content: start;
+  }
+  &__img {
+    width: 14.4rem;
+    @media only screen and (min-width: 850px) {
+      grid-area: h1;
+    }
+    img {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3.5rem 0 5rem 0;
+    @media only screen and (min-width: 850px) {
+      flex-direction: row;
+      grid-area: links;
+      margin: 0;
+    }
+    li {
+      color: $White;
+      list-style: none;
+      font-size: 1.5rem;
+      align-items: start;
+      @include lineunder(46%);
+    }
+  }
+  &__socials {
+    display: flex;
+    gap: 1.6rem;
+    @media only screen and (min-width: 850px) {
+      grid-area: socials;
+    }
+    a {
+      width: 2.4rem;
+      img {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .icon-twitter {
+        margin-bottom: 0.9rem;
+      }
+      @include lineunder;
+    }
+  }
+  p {
+    color: $Dark-Gray;
+    margin-top: 1.4rem;
+    font-family: "Alata", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    @media only screen and (min-width: 850px) {
+      grid-area: copyright;
+      margin-top: 0;
+    }
+  }
+}
